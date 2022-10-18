@@ -1,12 +1,21 @@
-import { DbModule } from './db/db.module';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+
+import { DbModule } from './db/db.module';
 import { TodosModule } from './todos/todos.module';
 
+import { getEnvPath } from './common/helper/env.helper';
+const envFilePath: string = getEnvPath(`dist/common/envs`);
+
+console.log(envFilePath);
+
 @Module({
-  imports: [DbModule, TodosModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({ envFilePath, isGlobal: true }),
+    DbModule,
+    TodosModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

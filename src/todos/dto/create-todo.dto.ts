@@ -1,6 +1,5 @@
 export class CreateTodoDto {
-    title: string;
-    description: string;
-    isCompleted?: boolean;
-  }
-  
+  title: string;
+  description: string;
+  isCompleted?: boolean;
+}

@@ -1,0 +1,41 @@
+###
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+
+{
+    "title": "sample",
+    "description": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "isCompleted": false
+}
+
+
+###
+GET http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+
+
+###
+GET http://localhost:3000/dev/todos/f2ca142a-d132-412a-a40a-bec28045f6ce HTTP/1.1
+content-type: application/json
+
+
+
+###
+POST https://3urfpctw2e.execute-api.us-east-1.amazonaws.com/dev/todos HTTP/1.1
+content-type: application/json
+
+{
+    "title": "sample 123",
+    "description": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "isCompleted": false
+}
+
+
+###
+GET https://3urfpctw2e.execute-api.us-east-1.amazonaws.com/dev/todos HTTP/1.1
+content-type: application/json
+
+
+###
+GET https://3urfpctw2e.execute-api.us-east-1.amazonaws.com/dev/todos/f2ca142a-d132-412a-a40a-bec28045f6ce HTTP/1.1
+content-type: application/json
